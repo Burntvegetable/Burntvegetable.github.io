@@ -181,3 +181,9 @@ opacity: 0.8;
   width: 9vw;
   cursor: pointer;
 }
+
+#cross{
+  position: absolute;
+  width: 20vw;
+  margin: 5vw 10vw;
+}

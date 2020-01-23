@@ -18,6 +18,7 @@ document.getElementById("blue").style.visibility = "hidden";
 document.getElementById("turn").style.visibility = "hidden";
 document.getElementById("redwins").style.visibility = "hidden";
 document.getElementById("bluewins").style.visibility = "hidden";
+document.getElementById("cross").style.visibility = "hidden";
 for (let el of document.querySelectorAll('.cell'))
 el.style.visibility = 'hidden';
 for (let el of document.querySelectorAll('.questions'))
@@ -63,6 +64,11 @@ function RandomQuestion() {
 function check(userinput){
   if(userinput == answer){
     randomItem.style.visibility = "hidden";
+  }
+  else{document.getElementById("cross").style.visibility = "visible";
+  setTimeout(continueExecution, 300)
+  function continueExecution(){
+  document.getElementById("cross").style.visibility = "hidden";}
   }
 }
 
