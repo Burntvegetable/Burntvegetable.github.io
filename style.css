@@ -1,0 +1,183 @@
+* {
+  font-family: Helvetica, Arial, sans-serif;
+  
+}
+button {
+  background-color: #45c21f;
+  border-radius: 0.5vw;
+  border: none;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  font-size: 0.8vw;
+  position: absolute;
+  width: 6vw;
+  height: 2vw;
+  margin:  7.2vw 13.1vw;
+  cursor: pointer;
+}
+
+button:hover {
+opacity: 0.8;
+  
+}
+#placeholder {
+  height: 6vw;
+  width: 6vw;
+  margin: 0.3vw 13vw 0.3vw;
+  border: 0.05vw solid gray;
+  border-radius: 0.2vw;  
+  font-size: 5vw;
+  text-align: center;
+  position: absolute;
+  background-color: white
+}
+
+#logo{
+  width: 60%;
+
+}
+#game {
+  position: absolute;
+  width: 57.8vw;
+  height: 62.6vw;
+  margin: 0vw 39vw;
+  }
+
+.container {
+  display: grid;
+  position: absolute;
+  margin: 4.5vw 38.6vw;
+  height: 53vw;
+  width: 53vw;
+  grid-template: repeat(10, 5.3vw) / repeat(10, 5.3vw); 
+}
+
+.cell {
+  border: 0.7vw transparent solid;
+  cursor: default;
+  width: 5.3vw;
+}
+
+#text {
+  position: absolute;
+  margin: -0.8vw 20vw;
+  width: 15vw;
+}
+
+#text2 {
+  position: absolute;
+  margin: 7vw 20vw;
+  width: 16vw;
+}
+
+#redcounter {
+  position: absolute;
+  margin: 18vw 22.7vw;
+  width: 5.3vw;
+  cursor: pointer;
+}
+
+
+#redcounter:hover {
+  opacity: 0.8;
+}
+
+#bluecounter {
+  position: absolute;
+  margin: 18vw 28.2vw;
+  width: 5.3vw;
+  cursor: pointer;
+}
+
+#bluecountercell {
+  position: absolute;
+  width: 5.3vw;
+}
+
+
+
+#bluecounter:hover {
+opacity: 0.8;
+}
+
+#red {
+  position: absolute;
+  margin: 10vw 13vw;
+  width: 25vw;
+}
+
+#blue {
+  position: absolute;
+  margin: 10vw 13vw;
+  width: 25vw;
+}
+
+#turn{
+  position: absolute;
+  margin: 19vw 10vw;
+  width: 5.2vw;
+}
+
+#redwins{
+  position: absolute;
+  margin: 0vw 20vw;
+  width: 70vw;
+}
+
+#bluewins{
+  position: absolute;
+  margin: 0vw 20vw;
+  width: 70vw;
+}
+
+#carryon{
+  position: absolute;
+  margin: 0vw 5vw;
+  width: 30vw;
+}
+
+#gregorypeck{
+  position: absolute;
+  margin: 0vw 5vw;
+  width: 30vw;
+}
+
+#jamesdean{
+  position: absolute;
+  margin: 0vw 5vw;
+  width: 30vw;
+}
+
+#simongar{
+  position: absolute;
+  margin: 0vw 5vw;
+  width: 30vw;
+}
+
+#space{
+  position: absolute;
+  margin: 0vw 5vw;
+  width: 30vw;
+}
+
+#button1{
+  opacity: 0%;
+  position: absolute;
+  margin: 23.7vw 6vw;
+  width: 9vw;
+  cursor: pointer;
+}
+#button2{
+  opacity: 0%;
+  position: absolute;
+  margin: 23.7vw 15.8vw;
+  width: 9vw;
+  cursor: pointer;
+}
+#button3{
+  opacity: 0%;
+  position: absolute;
+  margin: 23.7vw 25.5vw;
+  width: 9vw;
+  cursor: pointer;
+}
