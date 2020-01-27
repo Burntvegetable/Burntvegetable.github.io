@@ -1,8 +1,9 @@
 var dice = {
   sides: 6,
   roll: function () {
-    var randomNumber = Math.floor(Math.random() * this.sides) + 1;
-    return randomNumber;
+    //var randomNumber = Math.floor(Math.random() * //this.sides) + 1;
+    //return randomNumber;
+    return 10
   }
 }
 
@@ -64,30 +65,32 @@ function RandomQuestion() {
 function check(userinput, answer, randomItem){
   if(userinput == answer){
     randomItem.style.visibility = "hidden";
-    correct = true
-    
-  }
-  else{document.getElementById("cross").style.visibility = "visible";
+    var correct = true
+    return correct
+  
+  }else{document.getElementById("cross").style.visibility = "visible";
   setTimeout(continueExecution, 300)
   function continueExecution(){
   document.getElementById("cross").style.visibility = "hidden";
   randomItem.style.visibility = "hidden"}
-  correct = false
+  var correct = false
+  return correct
   
   }
+  
 }
 
 
-function iscorrect(totalblue, newvalue, result){
-  if (correct == true){
-    totalblue = value2, lasttotalblue = value1 - result
-    return totalblue
-    return lasttotalblue
-  }
-  else{totalblue = lasttotalblue
-    return totalblue
-    return lasttotalblue}
-}
+//function iscorrect(totalblue, newvalue, result){
+  //if (correct == true){
+    //totalblue = value2, lasttotalblue = value1 - //result
+    //return totalblue
+    //return lasttotalblue
+  //}
+  //else{totalblue = lasttotalblue
+    //return totalblue
+    //return lasttotalblue}
+//}
 
 
 
@@ -119,7 +122,6 @@ var totalblue = 0;
 var lasttotalblue = 0;
 var totalred = 0;
 var lasttotalred = 0;
-var correct = "";
 
 var button = document.getElementById('my_button');
 var result = "0"
@@ -129,18 +131,23 @@ button.onclick = function() {
   printNumber(result);
   
   if (turn == "blue") {totalblue += result
-    if (totalblue == 10) {RandomQuestion(), iscorrect(10, 69, result); 
-  } else if (totalblue == 18) {totalblue = 36, lasttotalblue = 18 - result, RandomQuestion();
-  } else if (totalblue == 33) {totalblue = 8, lasttotalblue = 33 - result, RandomQuestion();
-  } else if (totalblue == 45) {totalblue = 24, lasttotalblue = 45 - result, RandomQuestion();
-  } else if (totalblue == 46) {totalblue = 84, lasttotalblue = 46 - result, RandomQuestion();
-  } else if (totalblue == 63) {totalblue = 38, lasttotalblue = 63 - result, RandomQuestion();
-  } else if (totalblue == 66) {totalblue = 51, lasttotalblue = 66 - result, RandomQuestion();
-  } else if (totalblue == 82) {totalblue = 42, lasttotalblue = 82 - result, RandomQuestion();
+    if (totalblue == 10) {RandomQuestion()
+      if (correct == true){
+      totalblue = 69, lasttotalblue = 10 - result, console.log(totalblue);
+      }else{totalblue = lasttotalblue}
+
+  } else if (totalblue == 18) {RandomQuestion(), totalblue = 36, lasttotalblue = 18 - result;
+  } else if (totalblue == 33) {RandomQuestion(), totalblue = 8, lasttotalblue = 33 - result;
+  } else if (totalblue == 45) {RandomQuestion(), totalblue = 24, lasttotalblue = 45 - result;
+  } else if (totalblue == 46) {RandomQuestion(), totalblue = 84, lasttotalblue = 46 - result;
+  } else if (totalblue == 63) {RandomQuestion(), totalblue = 38, lasttotalblue = 63 - result;
+  } else if (totalblue == 66) {RandomQuestion(), totalblue = 51, lasttotalblue = 66 - result;
+  } else if (totalblue == 82) {RandomQuestion(), totalblue = 42, lasttotalblue = 82 - result;
   } else if (totalblue == 99 || totalblue == 100 || totalblue == 101 || totalblue == 102 || totalblue == 103 || totalblue == 104) {document.getElementById("bluewins").style.visibility = "visible";
   } else {lasttotalblue = totalblue - result};
     bluecountermovement(totalblue);
     }
+  
 
   else if (turn == "red") {totalred += result
     if (totalred == 10) {totalred = 69,    lasttotalred = 10 - result, RandomQuestion();
