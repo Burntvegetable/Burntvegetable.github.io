@@ -1,9 +1,9 @@
 var dice = {
   sides: 6,
   roll: function () {
-    //var randomNumber = Math.floor(Math.random() * //this.sides) + 1;
-    //return randomNumber;
-    return 10
+    var randomNumber = Math.floor(Math.random() * this.sides) + 1;
+    return randomNumber;
+    //return 10
   }
 }
 
@@ -132,9 +132,9 @@ button.onclick = function() {
   
   if (turn == "blue") {totalblue += result
     if (totalblue == 10) {RandomQuestion()
-      if (correct == true){
-      totalblue = 69, lasttotalblue = 10 - result, console.log(totalblue);
-      }else{totalblue = lasttotalblue}
+      //if (correct == true){
+     // totalblue = 69, lasttotalblue = 10 - result, console.log(totalblue);
+      //}else{totalblue = lasttotalblue}
 
   } else if (totalblue == 18) {RandomQuestion(), totalblue = 36, lasttotalblue = 18 - result;
   } else if (totalblue == 33) {RandomQuestion(), totalblue = 8, lasttotalblue = 33 - result;
