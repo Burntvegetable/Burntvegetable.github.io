@@ -1,9 +1,9 @@
 var dice = {
   sides: 6,
   roll: function () {
-    var randomNumber = Math.floor(Math.random() * this.sides) + 1;
-    return randomNumber;
-    //return 10
+    //var randomNumber = Math.floor(Math.random() * this.sides) + 1;
+    //return randomNumber;
+    return 10
   }
 }
 
@@ -30,27 +30,16 @@ var myArray = document.querySelectorAll('.questions');
 
 function RandomQuestion() {
   var answer = 0
-  var userinput = 0
 
   var randomItem = myArray[Math.floor(Math.random()*myArray.length)];
-  randomItem.style.visibility = "visible"; 
-  for (let el of document.querySelectorAll('.buttons'))
-  el.style.visibility = 'visible';
-
-  
-  
-  var button1 = document.getElementById("button1");
-  var button2 = document.getElementById("button2");
-  var button3 = document.getElementById("button3");
-
-  button1.onclick = function(){check(1, answer, randomItem)};
-  button2.onclick = function(){check(2, answer,  randomItem)};
-  button3.onclick = function(){check(3, answer,  randomItem)};
-  
-  
+  randomItem.style.visibility = "visible";
+  for (let el of document.querySelectorAll('.buttons')){el.style.visibility = 'visible';}
+ 
+ 
 
   if(randomItem.id == "gregorypeck"){
-    answer = 1;
+ 
+  answer = 1;
 } else if (randomItem.id == "carryon"){
   answer = 2;
 } else if (randomItem.id == "jamesdean"){
@@ -60,37 +49,49 @@ function RandomQuestion() {
 } else if (randomItem.id == "space"){
   answer = 1;
 }
+
+ 
+  var button1 = document.getElementById("button1");
+  var button2 = document.getElementById("button2");
+  var button3 = document.getElementById("button3");
+ 
+  button1.onclick = function(){check(1, answer, randomItem)};
+  button2.onclick = function(){check(2, answer, randomItem)};
+  button3.onclick = function(){check(3, answer, randomItem)};
+ 
+ 
 }
-  
+
+ 
 function check(userinput, answer, randomItem){
   if(userinput == answer){
     randomItem.style.visibility = "hidden";
-    var correct = true
-    return correct
-  
+    iscorrect(true)
+ 
   }else{document.getElementById("cross").style.visibility = "visible";
   setTimeout(continueExecution, 300)
   function continueExecution(){
   document.getElementById("cross").style.visibility = "hidden";
   randomItem.style.visibility = "hidden"}
-  var correct = false
-  return correct
-  
+  iscorrect(false)
+ 
   }
-  
+ 
 }
 
 
-//function iscorrect(totalblue, newvalue, result){
-  //if (correct == true){
-    //totalblue = value2, lasttotalblue = value1 - //result
-    //return totalblue
-    //return lasttotalblue
-  //}
-  //else{totalblue = lasttotalblue
-    //return totalblue
-    //return lasttotalblue}
-//}
+function iscorrect(correct){
+  if (correct == true){
+    lasttotalblue = totalblue - result,
+    totalblue = newtotalblue;}
+ 
+  else{
+    lasttotalblue = totalblue - result,
+    totalblue = lasttotalblue;}
+
+    return totalblue
+    return lasttotalblue
+  }
 
 
 
