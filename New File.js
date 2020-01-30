@@ -29,6 +29,8 @@ el.style.visibility = 'hidden';
 var myArray = document.querySelectorAll('.questions');
 
 function RandomQuestion() {
+  console.log(totalblue);
+  console.log(newtotalblue);
   var answer = 0
 
   var randomItem = myArray[Math.floor(Math.random()*myArray.length)];
@@ -83,11 +85,13 @@ function check(userinput, answer, randomItem){
 function iscorrect(correct){
   if (correct == true){
     lasttotalblue = totalblue - result,
-    totalblue = newtotalblue;}
+    totalblue = newtotalblue;
+    }
  
   else{
     lasttotalblue = totalblue - result,
-    totalblue = lasttotalblue;}
+    totalblue = lasttotalblue;
+    }
 
     return totalblue
     return lasttotalblue
@@ -123,20 +127,17 @@ var totalblue = 0;
 var lasttotalblue = 0;
 var totalred = 0;
 var lasttotalred = 0;
+var newtotalblue = 0;
 
 var button = document.getElementById('my_button');
-var result = "0"
+var result = 0
 
 button.onclick = function() {
   var result = dice.roll();
   printNumber(result);
   
   if (turn == "blue") {totalblue += result
-    if (totalblue == 10) {RandomQuestion()
-      //if (correct == true){
-     // totalblue = 69, lasttotalblue = 10 - result, console.log(totalblue);
-      //}else{totalblue = lasttotalblue}
-
+    if (totalblue == 10) {newtotalblue = 69, RandomQuestion();
   } else if (totalblue == 18) {RandomQuestion(), totalblue = 36, lasttotalblue = 18 - result;
   } else if (totalblue == 33) {RandomQuestion(), totalblue = 8, lasttotalblue = 33 - result;
   } else if (totalblue == 45) {RandomQuestion(), totalblue = 24, lasttotalblue = 45 - result;
