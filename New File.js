@@ -31,7 +31,7 @@ var myArray = document.querySelectorAll('.questions');
 function RandomQuestion() {
   console.log(totalblue);
   console.log(newtotalblue);
-  var answer = 0
+  var answer = 0;
 
   var randomItem = myArray[Math.floor(Math.random()*myArray.length)];
   randomItem.style.visibility = "visible";
