@@ -1,7 +1,7 @@
 var dice = {
   sides: 6,
   roll: function () {
-    //var randomNumber = Math.floor(Math.random() * //this.sides) + 1;
+  //var randomNumber = Math.floor(Math.random() * this.sides) + 1;
     //return randomNumber;
     return 10
   }
@@ -60,21 +60,24 @@ function RandomQuestion() {
 function check(userinput, answer, randomItem){
   if(userinput == answer){
     randomItem.style.visibility = "hidden";
-    iscorrect(true)
+    if(turn == "blue"){iscorrectblue(true)}
+    else if (turn == "red"){iscorrectred(true)}
 
   }else{document.getElementById("cross").style.visibility = "visible";
   setTimeout(continueExecution, 300)
   function continueExecution(){
   document.getElementById("cross").style.visibility = "hidden";
   randomItem.style.visibility = "hidden"}
-  iscorrect(false)
+  if(turn == "blue"){iscorrectblue(false)}
+  else if (turn == "red"){iscorrectred(false)}
+  
  
   }
  
 }
 
 
-function iscorrect(correct){
+function iscorrectblue(correct){
   if (correct == true){
     lasttotalblue = oldtotalblue - result;
     }
@@ -88,6 +91,23 @@ function iscorrect(correct){
     return totalblue
     return lasttotalblue
   }
+
+
+function iscorrectred(correct){
+  if (correct == true){
+    lasttotalred = oldtotalred - result;
+    }
+ 
+  else{
+    lasttotalred = oldtotalred - result,
+    totalred = lasttotalred;
+   
+    }
+
+    return totalred
+    return lasttotalred
+  }
+
 
 
 
@@ -120,6 +140,7 @@ var lasttotalblue = 0;
 var totalred = 0;
 var lasttotalred = 0;
 var oldtotalblue = 0;
+var oldtotalred = 0;
 
 var button = document.getElementById('my_button');
 var result = 0
@@ -130,13 +151,13 @@ button.onclick = function() {
   
   if (turn == "blue") {totalblue += result
     if (totalblue == 10) {totalblue = 69, oldtotalblue = 10, RandomQuestion();
-  } else if (totalblue == 18) {RandomQuestion(), totalblue = 36, lasttotalblue = 18 - result;
-  } else if (totalblue == 33) {RandomQuestion(), totalblue = 8, lasttotalblue = 33 - result;
-  } else if (totalblue == 45) {RandomQuestion(), totalblue = 24, lasttotalblue = 45 - result;
-  } else if (totalblue == 46) {RandomQuestion(), totalblue = 84, lasttotalblue = 46 - result;
-  } else if (totalblue == 63) {RandomQuestion(), totalblue = 38, lasttotalblue = 63 - result;
-  } else if (totalblue == 66) {RandomQuestion(), totalblue = 51, lasttotalblue = 66 - result;
-  } else if (totalblue == 82) {RandomQuestion(), totalblue = 42, lasttotalblue = 82 - result;
+  } else if (totalblue == 18) {totalblue = 36, oldtotalblue = 18, RandomQuestion();
+  } else if (totalblue == 33) {totalblue = 8, oldtotalblue = 33, RandomQuestion();
+  } else if (totalblue == 45) {totalblue = 24, oldtotalblue = 45, RandomQuestion();
+  } else if (totalblue == 46) {totalblue = 84, oldtotalblue = 46, RandomQuestion();
+  } else if (totalblue == 63) {totalblue = 38, oldtotalblue = 63, RandomQuestion();
+  } else if (totalblue == 66) {totalblue = 51, oldtotalblue = 66, RandomQuestion();
+  } else if (totalblue == 82) {totalblue = 42, oldtotalblue = 82, RandomQuestion();
   } else if (totalblue == 99 || totalblue == 100 || totalblue == 101 || totalblue == 102 || totalblue == 103 || totalblue == 104) {document.getElementById("bluewins").style.visibility = "visible";
   } else {lasttotalblue = totalblue - result};
     bluecountermovement(totalblue);
@@ -144,14 +165,14 @@ button.onclick = function() {
   
 
   else if (turn == "red") {totalred += result
-    if (totalred == 10) {totalred = 69,    lasttotalred = 10 - result, RandomQuestion();
-  } else if (totalred == 18) {totalred = 36,    lasttotalred = 18 - result, RandomQuestion();
-  } else if (totalred == 33) {totalred = 8,    lasttotalred = 33 - result, RandomQuestion();
-  } else if (totalred == 45) {totalred = 24,    lasttotalred = 45 - result, RandomQuestion();
-  } else if (totalred == 46) {totalred = 84,    lasttotalred = 46 - result, RandomQuestion();
-  } else if (totalred == 63) {totalred = 38,    lasttotalred = 63 - result, RandomQuestion();
-  } else if (totalred == 66) {totalred = 51,    lasttotalred = 66 - result, RandomQuestion();
-  } else if (totalred == 82) {totalred= 42,    lasttotalred = 82 - result, RandomQuestion();
+    if (totalred == 10) {totalred = 69, oldtotalred = 10, RandomQuestion();
+  } else if (totalred == 18) {totalred = 36, oldtotalred = 18, RandomQuestion();
+  } else if (totalred == 33) {totalred = 8, oldtotalred = 33, RandomQuestion();
+  } else if (totalred == 45) {totalred = 24, oldtotalred = 45, RandomQuestion();
+  } else if (totalred == 46) {totalred = 84, oldtotalred = 46, RandomQuestion();
+  } else if (totalred == 63) {totalred = 38, oldtotalred = 63, RandomQuestion();
+  } else if (totalred == 66) {totalred = 51, oldtotalred = 66, RandomQuestion();
+  } else if (totalred == 82) {totalred = 42, oldtotalred = 82, RandomQuestion();
   } else if (totalred == 99 || totalred == 100 || totalred == 101 || totalred == 102 || totalred == 103 || totalred == 104) {document.getElementById("redwins").style.visibility = "visible";
   }
     else {lasttotalred = totalred - result}
