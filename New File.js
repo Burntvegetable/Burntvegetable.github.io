@@ -193,7 +193,7 @@ button.onclick = function() {
   } else if (totalblue == 82) {totalblue = 42, oldtotalblue = 82, type = "snake", RandomQuestion();
   } else if (totalblue >= 99) {document.getElementById("bluewins").style.visibility = "visible";
   } else {lasttotalblue = totalblue - result};
-    if (totalblue <100){
+    if (totalblue <99){
        bluecountermovement(totalblue);}
     }
   
@@ -210,7 +210,7 @@ button.onclick = function() {
   } else if (totalred >= 99) {document.getElementById("redwins").style.visibility = "visible";
   }
     else {lasttotalred = totalred - result}
-    if (totalred <100){
+    if (totalred <99){
        redcountermovement(totalred);}
     }
 }
