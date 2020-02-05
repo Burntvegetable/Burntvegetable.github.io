@@ -210,6 +210,8 @@ button.onclick = function() {
 
 
 
+
+
 function bluecountermovement(number) {
   
   var combineblue = "bluecountercell" + number;
