@@ -192,7 +192,7 @@ button.onclick = function() {
   } else if (totalblue == 63) {totalblue = 38, oldtotalblue = 63, type = "snake", RandomQuestion();
   } else if (totalblue == 66) {totalblue = 51, oldtotalblue = 66, type = "snake", RandomQuestion();
   } else if (totalblue == 82) {totalblue = 42, oldtotalblue = 82, type = "snake", RandomQuestion();
-  } else if (totalblue == 99 || totalblue == 100 || totalblue == 101 || totalblue == 102 || totalblue == 103 || totalblue == 104) {document.getElementById("bluewins").style.visibility = "visible";
+  } else if (totalblue >= 99) {document.getElementById("bluewins").style.visibility = "visible";
   } else {lasttotalblue = totalblue - result};
     if (totalblue <100){
        bluecountermovement(totalblue);}
@@ -208,7 +208,7 @@ button.onclick = function() {
   } else if (totalred == 63) {totalred = 38, oldtotalred = 63, type = "snake", RandomQuestion();
   } else if (totalred == 66) {totalred = 51, oldtotalred = 66, type = "snake", RandomQuestion();
   } else if (totalred == 82) {totalred = 42, oldtotalred = 82, type = "snake", RandomQuestion();
-  } else if (totalred == 99 || totalred == 100 || totalred == 101 || totalred == 102 || totalred == 103 || totalred == 104) {document.getElementById("redwins").style.visibility = "visible";
+  } else if (totalred >= 99) {document.getElementById("redwins").style.visibility = "visible";
   }
     else {lasttotalred = totalred - result}
     if (totalred <100){
