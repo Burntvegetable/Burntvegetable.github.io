@@ -99,12 +99,11 @@ function iscorrectblue(correct){
   else if (correct == true && type == "snake"){
     lasttotalblue = totalblue,
     totalblue = oldtotalblue - result,
-    console.log("totalblue",totalblue), console.log("correct is true",correct),
     bluecountermovement(totalblue); 
     }
   
   else if (correct == false && type == "snake"){
-    lasttotalblue = oldtotalblue - result, console.log("totalblue",totalblue), console.log("correct is false",correct),
+    lasttotalblue = oldtotalblue - result,
     bluecountermovement(totalblue);
   }
     

@@ -38,24 +38,24 @@ opacity: 0.8;
 }
 #game {
   position: absolute;
-  width: 57.8vw;
-  height: 62.6vw;
+  width: 50vw;
   margin: 0vw 39vw;
   }
 
 .container {
   display: grid;
   position: absolute;
-  margin: 4.5vw 38.6vw;
-  height: 53vw;
-  width: 53vw;
-  grid-template: repeat(10, 5.3vw) / repeat(10, 5.3vw); 
+  margin: 4vw 39vw;
+  width: 46vw;
+  height: 46vw;
+  grid-template: repeat(10, 4.6vw) / repeat(10, 4.6vw);
 }
 
 .cell {
-  border: 0.7vw transparent solid;
+  border: 0.2vw transparent solid;
   cursor: default;
-  width: 5.3vw;
+  width:4.6vw;
+ 
 }
 
 #text {
@@ -120,14 +120,14 @@ opacity: 0.8;
 
 #redwins{
   position: absolute;
-  margin: 0vw 20vw;
-  width: 70vw;
+  width: 57.8vw;
+  margin: -7vh 36vw;
 }
 
 #bluewins{
   position: absolute;
-  margin: 0vw 20vw;
-  width: 70vw;
+  width: 57.8vw;
+  margin: -7vh 36vw;
 }
 
 #carryon{
