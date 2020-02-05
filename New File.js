@@ -49,6 +49,14 @@ function RandomQuestion() {
   answer = 1;
 } else if (randomItem.id == "space"){
   answer = 1;
+} else if (randomItem.id == "spanish"){
+  answer = 3;
+} else if (randomItem.id == "penny"){
+  answer = 3;
+} else if (randomItem.id == "chopin"){
+  answer = 3;
+} else if (randomItem.id == "fathom"){
+  answer = 1;
 }
 
   document.getElementById("button1").onclick = function(){check(1, answer, randomItem)};
@@ -186,7 +194,8 @@ button.onclick = function() {
   } else if (totalblue == 82) {totalblue = 42, oldtotalblue = 82, type = "snake", RandomQuestion();
   } else if (totalblue == 99 || totalblue == 100 || totalblue == 101 || totalblue == 102 || totalblue == 103 || totalblue == 104) {document.getElementById("bluewins").style.visibility = "visible";
   } else {lasttotalblue = totalblue - result};
-    bluecountermovement(totalblue);
+    if (totalblue <100){
+       bluecountermovement(totalblue);}
     }
   
 
@@ -202,7 +211,8 @@ button.onclick = function() {
   } else if (totalred == 99 || totalred == 100 || totalred == 101 || totalred == 102 || totalred == 103 || totalred == 104) {document.getElementById("redwins").style.visibility = "visible";
   }
     else {lasttotalred = totalred - result}
-    redcountermovement(totalred);
+    if (totalred <100){
+       redcountermovement(totalred);}
     }
 }
 

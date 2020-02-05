@@ -160,6 +160,30 @@ opacity: 0.8;
   width: 30vw;
 }
 
+#chopin{
+  position: absolute;
+  margin: 0vw 5vw;
+  width: 30vw;
+}
+
+#penny{
+  position: absolute;
+  margin: 0vw 5vw;
+  width: 30vw;
+}
+
+#spanish{
+  position: absolute;
+  margin: 0vw 5vw;
+  width: 30vw;
+}
+
+#fathom{
+  position: absolute;
+  margin: 0vw 5vw;
+  width: 30vw;
+}
+
 #button1{
   opacity: 0%;
   position: absolute;
