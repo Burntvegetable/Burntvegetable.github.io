@@ -78,7 +78,7 @@ function check(userinput, answer, randomItem){
   randomItem.style.visibility = "hidden"}
   if(turn == "red"){iscorrectblue(false)}
   else if (turn == "blue"){iscorrectred(false)}
-  
+   
  
   }
  
@@ -153,7 +153,7 @@ document.getElementById("red").style.visibility = "visible";
 document.getElementById("turn").style.visibility = "visible";
 document.getElementById("redcountercell0").style.visibility = "visible";
 document.getElementById("bluecountercell0").style.visibility = "visible";
-turn = "red"
+turn = "red";
 }
 
 bluecounter.onclick = function() {
@@ -245,13 +245,9 @@ function redcountermovement(number) {
 
 function finishedred() {
   document.getElementById("redwins").style.visibility = "visible";
-  var lastcombinered = "redcountercell" + lasttotalred;
-  document.getElementById(lastcombinered).style.visibility = "hidden";
 }
 function finishedblue() {
   document.getElementById("bluewins").style.visibility = "visible";
-  var lastcombinered = "bluecountercell" + lasttotalred;
-  document.getElementById(lastcombinered).style.visibility = "hidden";
 }
 
 function turnpositionblue(){
