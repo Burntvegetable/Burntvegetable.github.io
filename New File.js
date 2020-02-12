@@ -16,7 +16,6 @@ function printNumber(number) {
 
 document.getElementById("red").style.visibility = "hidden";
 document.getElementById("blue").style.visibility = "hidden";
-document.getElementById("turn").style.visibility = "hidden";
 document.getElementById("redwins").style.visibility = "hidden";
 document.getElementById("bluewins").style.visibility = "hidden";
 document.getElementById("cross").style.visibility = "hidden";
@@ -153,7 +152,6 @@ document.getElementById("redcounter").style.visibility = "hidden";
 document.getElementById("bluecounter").style.visibility = "hidden";
 document.getElementById("text2").style.visibility = "hidden";
 document.getElementById("red").style.visibility = "visible";
-document.getElementById("turn").style.visibility = "visible";
 document.getElementById("redcountercell0").style.visibility = "visible";
 document.getElementById("bluecountercell0").style.visibility = "visible";
 turn = "red";
@@ -164,7 +162,6 @@ document.getElementById("bluecounter").style.visibility = "hidden";
 document.getElementById("redcounter").style.visibility = "hidden";
 document.getElementById("text2").style.visibility = "hidden";
 document.getElementById("blue").style.visibility = "visible";
-document.getElementById("turn").style.visibility = "visible";
 document.getElementById("bluecountercell0").style.visibility = "visible";
 document.getElementById("redcountercell0").style.visibility = "visible";
 turn = "blue";
@@ -230,7 +227,6 @@ function bluecountermovement(number) {
   document.getElementById(combineblue).style.visibility = "visible";
   var lastcombineblue = "bluecountercell" + lasttotalblue;
   document.getElementById(lastcombineblue).style.visibility = "hidden";
-  turnpositionred();
   turn = "red";
 }
 
@@ -240,7 +236,6 @@ function redcountermovement(number) {
   document.getElementById(combinered).style.visibility = "visible";
   var lastcombinered = "redcountercell" + lasttotalred;
   document.getElementById(lastcombinered).style.visibility = "hidden";
-  turnpositionblue();
   turn = "blue";
 
  
@@ -251,12 +246,4 @@ function finishedred() {
 }
 function finishedblue() {
   document.getElementById("bluewins").style.visibility = "visible";
-}
-
-function turnpositionblue(){
-  document.getElementById("turn").style.marginTop = "19vw";
-}
-
-function turnpositionred(){
-  document.getElementById("turn").style.marginTop = "21.3vw";
 }

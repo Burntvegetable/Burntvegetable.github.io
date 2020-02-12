@@ -1,7 +1,8 @@
 * {
   font-family: Helvetica, Arial, sans-serif;
-  
+  cursor: url(https://i.postimg.cc/jS56cQZK/noun-python-139000655555.png), auto;
 }
+
 button {
   background-color: #45c21f;
   border-radius: 0.5vw;
@@ -53,7 +54,6 @@ opacity: 0.8;
 
 .cell {
   border: 0.2vw transparent solid;
-  cursor: default;
   width:4.6vw;
  
 }
