@@ -87,7 +87,8 @@ function check(userinput, answer, randomItem){
 
 function iscorrectblue(correct){
   if (correct == true && type == "ladder"){
-    lasttotalblue = oldtotalblue - result, bluecountermovement(totalblue);
+    //lasttotalblue = oldtotalblue - result, 
+    bluecountermovement(totalblue);
     }
  
   else if (correct == false && type == "ladder"){
@@ -103,7 +104,7 @@ function iscorrectblue(correct){
     }
   
   else if (correct == false && type == "snake"){
-    lasttotalblue = oldtotalblue - result,
+    //lasttotalblue = oldtotalblue - result,
     bluecountermovement(totalblue);
   }
     
@@ -117,7 +118,8 @@ function iscorrectblue(correct){
 
 function iscorrectred(correct){
   if (correct == true && type == "ladder"){
-    lasttotalred = oldtotalred - result, redcountermovement(totalred);
+    //lasttotalred = oldtotalred - result, 
+    redcountermovement(totalred);
     }
  
   else if (correct == false && type == "ladder"){
@@ -133,7 +135,8 @@ function iscorrectred(correct){
     }
   
     else if (correct == false && type == "snake"){
-    lasttotalred = oldtotalred - result, redcountermovement(totalred);
+    //lasttotalred = oldtotalred - result, 
+    redcountermovement(totalred);
   }
 
     return totalred
@@ -183,14 +186,14 @@ button.onclick = function() {
   printNumber(result);
   
   if (turn == "blue") {totalblue += result
-    if (totalblue == 10) {totalblue = 69, oldtotalblue = 10, type = "ladder", RandomQuestion();
-  } else if (totalblue == 18) {totalblue = 36, oldtotalblue = 18, type = "ladder", RandomQuestion();
-  } else if (totalblue == 33) {totalblue = 8, oldtotalblue = 33, type = "snake", RandomQuestion();
-  } else if (totalblue == 45) {totalblue = 24, oldtotalblue = 45, type = "snake", RandomQuestion();
-  } else if (totalblue == 46) {totalblue = 84, oldtotalblue = 46, type = "ladder", RandomQuestion();
-  } else if (totalblue == 63) {totalblue = 38, oldtotalblue = 63, type = "snake", RandomQuestion();
-  } else if (totalblue == 66) {totalblue = 51, oldtotalblue = 66, type = "snake", RandomQuestion();
-  } else if (totalblue == 82) {totalblue = 42, oldtotalblue = 82, type = "snake", RandomQuestion();
+    if (totalblue == 10) {totalblue = 69, oldtotalblue = 10, lasttotalblue = oldtotalblue - result, type = "ladder", RandomQuestion();
+  } else if (totalblue == 18) {totalblue = 36, oldtotalblue = 18, lasttotalblue = oldtotalblue - result, type = "ladder", RandomQuestion();
+  } else if (totalblue == 33) {totalblue = 8, oldtotalblue = 33, lasttotalblue = oldtotalblue - result, type = "snake", RandomQuestion();
+  } else if (totalblue == 45) {totalblue = 24, oldtotalblue = 45, lasttotalblue = oldtotalblue - result, type = "snake", RandomQuestion();
+  } else if (totalblue == 46) {totalblue = 84, oldtotalblue = 46, lasttotalblue = oldtotalblue - result, type = "ladder", RandomQuestion();
+  } else if (totalblue == 63) {totalblue = 38, oldtotalblue = 63, lasttotalblue = oldtotalblue - result, type = "snake", RandomQuestion();
+  } else if (totalblue == 66) {totalblue = 51, oldtotalblue = 66, lasttotalblue = oldtotalblue - result, type = "snake", RandomQuestion();
+  } else if (totalblue == 82) {totalblue = 42, oldtotalblue = 82, lasttotalblue = oldtotalblue - result, type = "snake", RandomQuestion();
   } else if (totalblue >= 99) {document.getElementById("bluewins").style.visibility = "visible";
   } else {lasttotalblue = totalblue - result};
     if (totalblue <99){
@@ -199,14 +202,14 @@ button.onclick = function() {
   
 
   else if (turn == "red") {totalred += result
-    if (totalred == 10) {totalred = 69, oldtotalred = 10, type = "ladder", RandomQuestion();
-  } else if (totalred == 18) {totalred = 36, oldtotalred = 18, type = "ladder", RandomQuestion();
-  } else if (totalred == 33) {totalred = 8, oldtotalred = 33, type = "snake", RandomQuestion();
-  } else if (totalred == 45) {totalred = 24, oldtotalred = 45, type = "snake", RandomQuestion();
-  } else if (totalred == 46) {totalred = 84, oldtotalred = 46, type = "ladder", RandomQuestion();
-  } else if (totalred == 63) {totalred = 38, oldtotalred = 63, type = "snake", RandomQuestion();
-  } else if (totalred == 66) {totalred = 51, oldtotalred = 66, type = "snake", RandomQuestion();
-  } else if (totalred == 82) {totalred = 42, oldtotalred = 82, type = "snake", RandomQuestion();
+    if (totalred == 10) {totalred = 69, oldtotalred = 10, lasttotalred = oldtotalred - result, type = "ladder", RandomQuestion();
+  } else if (totalred == 18) {totalred = 36, oldtotalred = 18, lasttotalred = oldtotalred - result, type = "ladder", RandomQuestion();
+  } else if (totalred == 33) {totalred = 8, oldtotalred = 33, lasttotalred = oldtotalred - result, type = "snake", RandomQuestion();
+  } else if (totalred == 45) {totalred = 24, oldtotalred = 45, lasttotalred = oldtotalred - result, type = "snake", RandomQuestion();
+  } else if (totalred == 46) {totalred = 84, oldtotalred = 46, lasttotalred = oldtotalred - result, type = "ladder", RandomQuestion();
+  } else if (totalred == 63) {totalred = 38, oldtotalred = 63, lasttotalred = oldtotalred - result, type = "snake", RandomQuestion();
+  } else if (totalred == 66) {totalred = 51, oldtotalred = 66, lasttotalred = oldtotalred - result, type = "snake", RandomQuestion();
+  } else if (totalred == 82) {totalred = 42, oldtotalred = 82, lasttotalred = oldtotalred - result, type = "snake", RandomQuestion();
   } else if (totalred >= 99) {document.getElementById("redwins").style.visibility = "visible";
   }
     else {lasttotalred = totalred - result}
